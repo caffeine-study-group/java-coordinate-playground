@@ -16,4 +16,13 @@ public class Points {
     public int getSize() {
         return list.size();
     }
+
+    public int getX(int i){
+        return list.get(i).getX();
+    }
+
+    public int getY(int i){
+        return list.get(i).getY();
+    }
+
 }
