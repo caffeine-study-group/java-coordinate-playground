@@ -19,4 +19,11 @@ class FigureFactoryTest {
         Figure rectangleFigure = FigureFactory.generate(points);
         assertTrue(rectangleFigure instanceof RectangleFigure);
     }
+
+    @Test
+    void 삼각향_생성_테스트() {
+        Points points = new Points(List.of(new Point(10, 10), new Point(14, 15), new Point(20, 8)));
+        Figure triangleFigure = FigureFactory.generate(points);
+        assertTrue(triangleFigure instanceof TriangleFigure);
+    }
 }

@@ -10,6 +10,10 @@ public class FigureFactory {
             return new RectangleFigure(points);
         }
 
-        return null;
+        if (FigureType.isTriangle(points.getSize())) {
+            return new TriangleFigure(points);
+        }
+
+        throw new IllegalArgumentException();
     }
 }
