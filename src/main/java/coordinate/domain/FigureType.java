@@ -1,7 +1,8 @@
 package coordinate.domain;
 
 public enum FigureType {
-    Line(2);
+    Line(2),
+    Rectangle(4);
 
 
    private final int pointCount;
@@ -12,5 +13,9 @@ public enum FigureType {
 
     public static boolean isLine(int pointCount) {
         return Line.pointCount == pointCount;
+    }
+
+    public static boolean isRectangle(int pointCount) {
+        return Rectangle.pointCount == pointCount;
     }
 }

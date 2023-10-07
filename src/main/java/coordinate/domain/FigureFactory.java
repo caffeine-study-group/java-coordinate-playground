@@ -6,6 +6,10 @@ public class FigureFactory {
             return new LineFigure(points);
         }
 
+        if (FigureType.isRectangle(points.getSize())) {
+            return new RectangleFigure(points);
+        }
+
         return null;
     }
 }

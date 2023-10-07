@@ -12,4 +12,11 @@ class FigureFactoryTest {
         Figure lineFigure = FigureFactory.generate(points);
         assertTrue(lineFigure instanceof LineFigure);
     }
+
+    @Test
+    void 사각형_생성_테스트() {
+        Points points = new Points(List.of(new Point(10, 10), new Point(22, 10), new Point(22, 18), new Point(10, 18)));
+        Figure rectangleFigure = FigureFactory.generate(points);
+        assertTrue(rectangleFigure instanceof RectangleFigure);
+    }
 }
