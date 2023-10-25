@@ -18,6 +18,4 @@ public class CoordinateParserTest {
             assertEquals(points.getList().get(i), point.get(i));
         }
     }
-
-
 }
