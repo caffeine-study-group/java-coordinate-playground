@@ -1,8 +1,10 @@
 package coordinate.domain;
 
+import coordinate.ui.OutputUI;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
+import java.util.List;
 
 public class CoordinateOutputTest {
 
@@ -40,13 +42,18 @@ public class CoordinateOutputTest {
 
         System.out.printf("%s", bottomBar);
 
-        for (int i = 1; i <= limit; i++) {
-           if (i % 2 == 0) {
-               System.out.printf("%6d", i);
-           }
+        for (int i = 2; i <= limit; i += 2) {
+           System.out.printf("%6d", i);
         }
 
         System.out.println();
     }
 
+    @Test
+    public void output_ui_graph_test() {
+        List<Point> pointList = Arrays.asList(new Point(10, 10), new Point(14, 15));
+        Points points = new Points(pointList);
+        OutputUI outputUI = new OutputUI(FigureFactory.generate(points));
+        outputUI.drawGraph();
+    }
 }

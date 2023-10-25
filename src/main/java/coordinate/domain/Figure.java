@@ -7,4 +7,7 @@ public interface Figure {
 
     double area();      // 너비
 
+    String returnSizeMessage();
+
+    boolean contains(Point point);
 }

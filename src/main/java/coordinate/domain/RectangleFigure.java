@@ -16,6 +16,11 @@ public class RectangleFigure extends AbstractFigure {
         return getWidth() * getHeight();
     }
 
+    @Override
+    public String returnSizeMessage() {
+        return String.format("사각형 넓이는 %.0f", area());
+    }
+
     private int getWidth() {
         return super.points.getMaxX() - super.points.getMinX();
     }

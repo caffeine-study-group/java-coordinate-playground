@@ -28,6 +28,11 @@ public class TriangleFigure extends AbstractFigure {
         return Math.sqrt(s * (s - a) * (s - b) * (s - c));
     }
 
+    @Override
+    public String returnSizeMessage() {
+        return String.format("삼각형의 넓이는 %.1f", area());
+    }
+
     private Figure getLine(int p1, int p2) {
         List<Point> pointList = super.points.getList();
         return FigureFactory.generate(new Points(Arrays.asList(pointList.get(p1), pointList.get(p2))));

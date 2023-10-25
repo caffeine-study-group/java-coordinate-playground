@@ -1,11 +1,7 @@
 package coordinate.domain;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class Points {
     private final List<Point> list;
@@ -60,5 +56,9 @@ public class Points {
                 .mapToInt(Point::getY)
                 .max()
                 .orElseThrow(NoSuchElementException::new);
+    }
+
+    public boolean contains(Point point) {
+        return this.list.contains(point);
     }
 }

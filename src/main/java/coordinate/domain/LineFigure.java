@@ -15,6 +15,11 @@ public class LineFigure extends AbstractFigure {
         return 0;
     }
 
+    @Override
+    public String returnSizeMessage() {
+        return String.format("두 점 사이의 거리는 %d", distance());
+    }
+
     private int subtractExactX() {
         return Math.subtractExact(super.points.getX(0), super.points.getX(1));
     }
